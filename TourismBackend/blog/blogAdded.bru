@@ -1,0 +1,24 @@
+meta {
+  name: blogAdded
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:5252/ad/blog/blog
+  body: multipartForm
+  auth: none
+}
+
+body:multipart-form {
+  id: 1
+  titleAz: Elman
+  titleEn: Elman
+  contentAz: elman
+  contentEn: elman
+  imageUrl: @file(C:\Users\Elman\Pictures\Screenshots\Screenshot 2025-02-25 202905.png)
+  author: Alakbarzade
+  categories: 67cd9ac21f3ac43087dc2378
+  isActive: true
+  ~comments: 
+}

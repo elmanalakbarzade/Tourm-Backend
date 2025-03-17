@@ -1,0 +1,19 @@
+meta {
+  name: destAdd
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:5252/ad/destination/destination
+  body: multipartForm
+  auth: none
+}
+
+body:multipart-form {
+  id: 1
+  destImg: @file(C:\Users\Elman\Pictures\Screenshots\Screenshot 2024-12-16 173855.png)
+  destTitleEn: Salyan
+  destTitleAz: Salyan
+  destCount: 5
+}

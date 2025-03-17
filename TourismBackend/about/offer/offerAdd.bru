@@ -1,0 +1,19 @@
+meta {
+  name: offerAdd
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:5252/ad/about/offer
+  body: multipartForm
+  auth: none
+}
+
+body:multipart-form {
+  id: 2
+  image: @file(C:\Users\Elman\Pictures\Screenshots\Screenshot 2025-01-27 034157.png)
+  offerNameEn: Az
+  offerNameAz: En
+  buttonUrl: asdsad
+}

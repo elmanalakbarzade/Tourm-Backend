@@ -1,0 +1,119 @@
+meta {
+  name: tourAdd
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:5252/ad/tour/tour
+  body: multipartForm
+  auth: none
+}
+
+body:json {
+  {
+      "id": 1,
+      "titleEn": "Caspian Adventure",
+      "titleAz": "Xəzər Macərası",
+      "duration": "7 days",
+      "tripInfo": {
+          "accommodationEn": "3-Star Hotel",
+          "accommodationAz": "3-Ulduzlu Otel",
+          "departureCityEn": "Baku",
+          "departureCityAz": "Bakı",
+          "arrivalCityEn": "Gabala",
+          "arrivalCityAz": "Qəbələ",
+          "bestSeasonEn": "Spring & Summer",
+          "bestSeasonAz": "Yaz və Yay",
+          "guideEn": "English Speaking Guide",
+          "guideAz": "İngiliscə Danışan Bələdçi",
+          "language": ["English", "Azerbaijani"],
+          "mealsEn": "Breakfast, Lunch, Dinner",
+          "mealsAz": "Səhər yeməyi, Nahar, Şam yeməyi",
+          "tourAvailabilityEn": "All year round",
+          "tourAvailabilityAz": "İl boyu",
+          "transportationEn": ["Bus", "Minivan"],
+          "transportationAz": ["Avtobus", "Mikroavtobus"],
+          "walkingHoursEn": "2-3 hours daily",
+          "walkingHoursAz": "Gündəlik 2-3 saat",
+          "minimumAge": 10,
+          "maximumAge": 65,
+          "destinations": ["65f2b5d3e4a5f1c2a3d4e5f6"],
+          "activities": ["65f2b5d3e4a5f1c2a3d4e5f7"],
+          "tripTypeEn": ["Adventure", "Cultural"],
+          "tripTypeAz": ["Macəra", "Mədəni"],
+          "originalprice": 700,
+          "discountedprice": 600,
+          "discount": 15
+      },
+      "overview": {
+          "titleEn": "Explore the Heart of Azerbaijan",
+          "titleAz": "Azərbaycanın Qəlbini Kəşf Edin",
+          "descriptionEn": "Experience the rich culture, breathtaking nature, and historical landmarks.",
+          "descriptionAz": "Zəngin mədəniyyəti, möhtəşəm təbiəti və tarixi yerləri kəşf edin."
+      },
+      "itinerary": {
+          "titleEn": "Day 1 - Arrival",
+          "titleAz": "1-ci Gün - Gəliş",
+          "descriptionEn": "Arrival in Baku, transfer to hotel, and city tour.",
+          "descriptionAz": "Bakıya gəliş, otelə transfer və şəhər turu."
+      },
+      "cost": {
+          "titleEn": "Inclusive Package",
+          "titleAz": "Daxil olan Paket",
+          "descriptionEn": "Accommodation, meals, and guided tours are included.",
+          "descriptionAz": "Otel, yeməklər və bələdçi xidmətləri daxildir."
+      },
+      "rating": 4.8
+  }
+  
+}
+
+body:multipart-form {
+  id: 1
+  titleEn: Caspian Adventure
+  titleAz: Xəzər Macərası
+  duration: 7 days
+  images: @file(C:\Users\Elman\Pictures\Screenshots\Screenshot 2025-02-25 205944.png)
+  tripInfo[accommodationEn]: 3-Star Hotel
+  tripInfo[accommodationAz]: 3-Ulduzlu Otel
+  tripInfo[departureCityEn]: Baku
+  tripInfo[departureCityAz]: Baki
+  tripInfo[originalprice]: 700
+  tripInfo[discountedprice]: 600
+  tripInfo[discount]: 15
+  overview[titleEn]: Explore Azerbaijan
+  overview[descriptionEn]: Experience culture...
+  rating: 4.8
+  tripInfo[language]: Azerbaijani,English
+  tripInfo[arrivalCityEn]: London
+  tripInfo[arrivalCityAz]: Londra
+  tripInfo[bestSeasonEn]: Summer
+  tripInfo[bestSeasonAz]: Yay
+  tripInfo[guideEn]: Guided
+  tripInfo[guideAz]: Rehberli
+  tripInfo[mealsEn]: food
+  tripInfo[mealsAz]: yemek
+  tripInfo[tourAvailabilityEn]: available
+  tripInfo[tourAvailabilityAz]: uygun
+  tripInfo[transportationEn]: bus
+  tripInfo[transportationAz]: avtobus
+  tripInfo[walkingHoursEn]: 5-6 hours
+  tripInfo[walkingHoursAz]: 5-6 saat
+  tripInfo[minimumAge]: 18
+  tripInfo[maximumAge]: 65
+  destination: 67cdab7d92733885344673b5
+  activity: 67b6684f75070f7899ffe4fa
+  tripInfo[tripTypeEn]: Family Love
+  tripInfo[tripTypeAz]: Aile
+  overview[titleAz]: Salam
+  overview[descriptionAz]: Necesen
+  itinerary[titleEn]: bir
+  itinerary[titleAz]: one
+  itinerary[descriptionEn]: iki
+  itinerary[descriptionAz]: two
+  cost[titleEn]: three
+  cost[titleAz]: uc
+  cost[descriptionEn]: dord
+  cost[descriptionAz]: four
+}

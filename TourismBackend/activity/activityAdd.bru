@@ -1,0 +1,19 @@
+meta {
+  name: activityAdd
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:5252/ad/activity/activity
+  body: multipartForm
+  auth: none
+}
+
+body:multipart-form {
+  id: 2
+  actImg: @file(C:\Users\Elman\Pictures\Screenshots\Screenshot 2024-12-16 173855.png)
+  actTitleEn: Walking
+  actTitleAz: Gezinti
+  tripCount: 5
+}
