@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const cors = require('cors');
-const path = require("path"); // PATH MODULUNU IMPORT ET
+const path = require("path"); 
 const connectdb = require('./config/connectdb');
 require('dotenv').config();
 
@@ -34,13 +34,11 @@ app.use('/ad/generalinformation', adGeneralInformationRoute);
 app.use('/ad/tour' , adTourRoute);
 app.use('/ad/destination' , adDestinationRoute);
 
-// Database connection
 connectdb();
 
-// Uploads qovluğunu public elan edirik
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
-// Serveri işə salırıq
+
 const PORT = process.env.PORT || 5000;
 app.listen(process.env.PORT, () => {
     console.log(`${process.env.PORT} port is running`);
