@@ -31,22 +31,16 @@ app.use('/ad/about', adAboutRoute);
 app.use('/ad/faq', adFaqRoute);
 app.use('/ad/blog', adBlogRoute);
 app.use('/ad/generalinformation', adGeneralInformationRoute);
-app.use('/ad/tour', adTourRoute);
-app.use('/ad/destination', adDestinationRoute);
+app.use('/ad/tour' , adTourRoute);
+app.use('/ad/destination' , adDestinationRoute);
 
 connectdb();
 
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
-app.get('/', (req, res) => {
-    res.send("Welcome to the Tourism API!");
-});
 
-// Vercel üçün PORT konfiqurasiyası əlavə edildi
+
 const PORT = process.env.PORT || 5000;
+app.listen(process.env.PORT, () => {
+    console.log(`${process.env.PORT} port is running`);
 
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
 });
-
-// Vercel üçün aşağıdakı sətri əlavə edin
-module.exports = app;
