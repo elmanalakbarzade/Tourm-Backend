@@ -9,6 +9,9 @@ const { generalInformationList } = require("../../controllers/generalinformation
 const { tourList, tourListForActivity, tourListForDestination } = require("../../controllers/tour.js");
 const { destinationList } = require("../../controllers/destination.js");
 
+router.get('/', (req, res) => {
+    res.send("Welcome to the Tourism API from Surface Route!");
+});
 const router = express.Router();
 
 router.get("/populardestination", popularDestinationList);

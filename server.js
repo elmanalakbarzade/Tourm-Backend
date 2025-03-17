@@ -37,6 +37,9 @@ app.use('/ad/destination', adDestinationRoute);
 connectdb();
 
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
+app.get('/', (req, res) => {
+    res.send("Welcome to the Tourism API!");
+});
 
 // Vercel üçün PORT konfiqurasiyası əlavə edildi
 const PORT = process.env.PORT || 5000;
