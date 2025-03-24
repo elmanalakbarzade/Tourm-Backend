@@ -24,6 +24,7 @@ const adGeneralInformationRoute = require("./routers/admin/generalinformation");
 const adTourRoute = require("./routers/admin/tour");
 const adDestinationRoute = require("./routers/admin/destination");
 
+
 app.use('/ad/homepage', adHomeRoute);
 app.use('/ad/guiderdetails', adGuiderDetailsRoute);
 app.use('/ad/activity', adActivityRoute);
@@ -33,6 +34,7 @@ app.use('/ad/blog', adBlogRoute);
 app.use('/ad/generalinformation', adGeneralInformationRoute);
 app.use('/ad/tour' , adTourRoute);
 app.use('/ad/destination' , adDestinationRoute);
+
 
 connectdb();
 

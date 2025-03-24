@@ -4,9 +4,9 @@ const Joi = require("joi");
 const tourSchema = new mongoose.Schema(
     {
         id: { type: Number },
-        titleEn: { type: String, required: true, trim: true },
-        titleAz: { type: String, required: true, trim: true },
-        duration: { type: String, required: true },
+        titleEn: { type: String, trim: true },
+        titleAz: { type: String, trim: true },
+        duration: { type: String },
         images: [{ type: String }],
         tripInfo: {
             accommodationEn: { type: String },
@@ -47,8 +47,20 @@ const tourSchema = new mongoose.Schema(
         itinerary: {
             titleEn: { type: String },
             titleAz: { type: String },
-            descriptionEn: { type: String },
-            descriptionAz: { type: String },
+            dayOneEn: { type: String },
+            dayOneAz: { type: String },
+            dayTwoEn: { type: String },
+            dayTwoAz: { type: String },
+            dayThreeEn: { type: String },
+            dayThreeAz: { type: String },
+            dayFourEn: { type: String },
+            dayFourAz: { type: String },
+            dayFiveEn: { type: String },
+            dayFiveAz: { type: String },
+            daySixEn: { type: String },
+            daySixAz: { type: String },
+            daySevenEn: { type: String },
+            daySevenAz: { type: String },
         },
         cost: {
             titleEn: { type: String },
@@ -64,10 +76,10 @@ const tourSchema = new mongoose.Schema(
 
 const tourValidate = (tour) => {
     const schema = Joi.object({
-        id: Joi.number().required(),
-        titleEn: Joi.string().required(),
-        titleAz: Joi.string().required(),
-        duration: Joi.string().required(),
+        id: Joi.number(),
+        titleEn: Joi.string(),
+        titleAz: Joi.string(),
+        duration: Joi.string(),
         images: Joi.array().items(Joi.string()),
         tripInfo: Joi.object({
             accommodationEn: Joi.string(),
@@ -97,8 +109,8 @@ const tourValidate = (tour) => {
             discountedprice: Joi.number(),
             discount: Joi.number()
         }),
-        activity: Joi.string(), // At least one activity
-        destination:  Joi.string(), // At least one destination
+        activity: Joi.string(),
+        destination: Joi.string(),
         overview: Joi.object({
             titleEn: Joi.string(),
             titleAz: Joi.string(),
@@ -108,8 +120,20 @@ const tourValidate = (tour) => {
         itinerary: Joi.object({
             titleEn: Joi.string(),
             titleAz: Joi.string(),
-            descriptionEn: Joi.string(),
-            descriptionAz: Joi.string(),
+            dayOneAz: Joi.string(),
+            dayOneEn: Joi.string(),
+            dayTwoEn: Joi.string(),
+            dayTwoAz: Joi.string(),
+            dayThreeEn: Joi.string(),
+            dayThreeAz: Joi.string(),
+            dayFourEn: Joi.string(),
+            dayFourAz: Joi.string(),
+            dayFiveEn: Joi.string(),
+            dayFiveEn: Joi.string(),
+            daySixEn: Joi.string(),
+            daySixAz: Joi.string(),
+            daySevenEn: Joi.string(),
+            daySevenAz: Joi.string(),
         }),
         cost: Joi.object({
             titleEn: Joi.string(),
