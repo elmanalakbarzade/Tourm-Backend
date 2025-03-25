@@ -1,8 +1,5 @@
-const { User, userValidate, loginValidate} = require("../models/components/user");
+const { User, userValidate, loginValidate } = require("../models/components/user");
 const bcrypt = require("bcrypt");
-
-
-
 
 exports.userAuth = async (req, res) => {
     const { error } = loginValidate(req.body);
@@ -24,6 +21,11 @@ exports.userAuth = async (req, res) => {
         }
     }
 }
+exports.singleUser = async (req, res) => {
+    const user = await User.findById(req.params.id);
+    res.status(200).send(user);
+};
+
 
 exports.userList = async (req, res) => {
     const user = await User.find();

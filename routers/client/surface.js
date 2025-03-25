@@ -5,9 +5,10 @@ const { activityList } = require("../../controllers/activity.js");
 const { plantripList, offerList, partnerList, photoList } = require("../../controllers/about.js");
 const { faqList } = require("../../controllers/faq.js");
 const { blogcategoryList, blogList, blogcommentList, recentpostsList } = require("../../controllers/blog.js");
-const { generalInformationList } = require("../../controllers/generalinformation.js");
+const { generalInformationList, generalInformationSingleList } = require("../../controllers/generalinformation.js");
 const { tourList, tourListForActivity, tourListForDestination } = require("../../controllers/tour.js");
 const { destinationList } = require("../../controllers/destination.js");
+const { userList, singleUser } = require("../../controllers/user.js");
 
 const router = express.Router();
 
@@ -30,6 +31,10 @@ router.get('/tour', tourList);
 router.get('/destination', destinationList);
 router.get("/tour/activity/:id", tourListForActivity);
 router.get("/tour/destination/:id", tourListForDestination);
+router.get('/generalinformation/:id', generalInformationSingleList)
+router.get("/user", userList);
+router.get("/user/:id", singleUser);
+
 
 
 

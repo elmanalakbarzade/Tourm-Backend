@@ -22,7 +22,7 @@ const generalInformationSchema = Schema(
     { timestamps: true },
 );
 
-const generalInformationValidate = (gerenalInformation) => {
+const generalInformationValidate = (generalInformation) => {
     const schema = Joi.object({
         iconUrl: Joi.string(),
         favicon: Joi.string(),
@@ -42,7 +42,7 @@ const generalInformationValidate = (gerenalInformation) => {
 
 
     });
-    return schema.validate(gerenalInformation);
+    return schema.validate(generalInformation);
 };
 
 const GeneralInformation = mongoose.model("GeneralInformation", generalInformationSchema);

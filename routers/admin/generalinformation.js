@@ -1,13 +1,15 @@
 const express = require('express');
-const { generalInformationDelete, generalInformationEdit, generalInformationAdd, generalInformationList } = require('../../controllers/generalinformation');
+const upload = require("../../middlewares/uploadFile");
+const { generalInformationDelete, generalInformationEdit, generalInformationAdd, generalInformationList, generalInformationSingleList } = require('../../controllers/generalinformation');
 const router = express.Router();
 
 
 
 router.delete('/generalinformation/:id', generalInformationDelete);
-router.put('/generalinformation/:id', generalInformationEdit);
-router.post('/generalinformation', generalInformationAdd);
+router.put('/generalinformation/:id', upload.fields([{ name: "iconUrl", maxCount: 1 }, { name: "favicon", maxCount: 1 }]), generalInformationEdit);
+router.post('/generalinformation', upload.fields([{ name: "iconUrl", maxCount: 1 }, { name: "favicon", maxCount: 1 }]), generalInformationAdd);
 router.get('/generalinformation', generalInformationList);
+router.get('/generalinformation/:id', generalInformationSingleList)
 
 module.exports = router;
 
