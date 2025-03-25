@@ -129,7 +129,7 @@ const tourValidate = (tour) => {
             dayFourEn: Joi.string(),
             dayFourAz: Joi.string(),
             dayFiveEn: Joi.string(),
-            dayFiveEn: Joi.string(),
+            dayFiveAz: Joi.string(),
             daySixEn: Joi.string(),
             daySixAz: Joi.string(),
             daySevenEn: Joi.string(),
