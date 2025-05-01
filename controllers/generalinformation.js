@@ -1,4 +1,4 @@
-const { GuiderDetails, guiderDetailsValidate } = require('../models/components/generalinformation');
+const { GeneralInformation, generalInformationValidate } = require('../models/components/generalinformation');
 const { deleteSingleOldImage } = require('../utils/deleteOldImage');
 
 exports.generalInformationList = async (req, res) => {
